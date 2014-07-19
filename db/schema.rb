@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140719220936) do
+ActiveRecord::Schema.define(version: 20140719224144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "home_pages", force: true do |t|
+    t.string   "call_to_action"
+    t.string   "header"
+    t.text     "content"
+    t.integer  "website_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.datetime "banner_updated_at"
+  end
+
+  add_index "home_pages", ["website_id"], name: "index_home_pages_on_website_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

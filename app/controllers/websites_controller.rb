@@ -15,6 +15,7 @@ class WebsitesController < ApplicationController
   # GET /websites/new
   def new
     @website = Website.new
+    @website.build_home_page
   end
 
   # GET /websites/1/edit
@@ -69,6 +70,6 @@ class WebsitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def website_params
-      params.require(:website).permit(:name, :domain_name, :style, :logo)
+      params.require(:website).permit(:name, :domain_name, :style, :logo, home_page_attributes: [:id, :call_to_action, :header, :content, :banner])
     end
 end

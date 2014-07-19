@@ -7,5 +7,13 @@
     = f.input :style
     = f.input :logo, as: :file
 
+  %h2 Home Page
+  = f.simple_fields_for :home_page do |h|
+    .form-inputs
+      = h.input :call_to_action
+      = h.input :header
+      = h.input :content
+      = h.input :banner, as: :file
+
   .form-actions
     = f.button :submit
