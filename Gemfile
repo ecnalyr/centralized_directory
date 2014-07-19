@@ -14,10 +14,12 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'foundation-rails'
 gem 'haml-rails'
 gem 'high_voltage'
+gem "paperclip", "~> 4.1"
 gem 'pg'
 gem 'pundit'
 gem 'simple_form'
 group :development do
+  gem 'annotate', ">=2.6.0"
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
   gem 'guard-bundler'

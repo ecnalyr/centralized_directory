@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @website.name
+%p
+  %b Domain name:
+  = @website.domain_name
+%p
+  %b Style:
+  = @website.style
+%p
+  %b Logo:
+  = image_tag @website.logo.url
+
+= link_to 'Edit', edit_website_path(@website)
+\|
+= link_to 'Back', websites_path
