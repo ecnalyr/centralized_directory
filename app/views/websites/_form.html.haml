@@ -15,5 +15,12 @@
       = h.input :content
       = h.input :banner, as: :file
 
+  %h2 About Page
+  = f.simple_fields_for :about_page do |h|
+    .form-inputs
+      = h.input :header
+      = h.input :content
+      = h.input :avatar, as: :file
+
   .form-actions
     = f.button :submit

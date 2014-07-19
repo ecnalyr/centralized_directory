@@ -13,6 +13,33 @@
   %b Logo:
   = image_tag @website.logo.url
 
+%h2 Home Page
+
+%p
+  %b Name:
+  = @website.home_page.call_to_action
+%p
+  %b Domain name:
+  = @website.home_page.header
+%p
+  %b Style:
+  = @website.home_page.content
+%p
+  %b Logo:
+  = image_tag @website.home_page.banner.url
+
+%h2 About Page
+
+%p
+  %b Name:
+  = @website.about_page.header
+%p
+  %b Domain name:
+  = @website.about_page.content
+%p
+  %b Logo:
+  = image_tag @website.about_page.avatar.url
+
 = link_to 'Edit', edit_website_path(@website)
 \|
 = link_to 'Back', websites_path
