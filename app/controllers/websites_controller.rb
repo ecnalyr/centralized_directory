@@ -1,5 +1,5 @@
 class WebsitesController < ApplicationController
-  before_action :set_website, only: [:show, :edit, :update, :destroy]
+  before_action :set_website, only: [:show, :edit, :update, :home, :about, :contact, :destroy]
 
   # GET /websites
   # GET /websites.json
@@ -10,6 +10,15 @@ class WebsitesController < ApplicationController
   # GET /websites/1
   # GET /websites/1.json
   def show
+  end
+
+  def home
+  end
+
+  def about
+  end
+
+  def contact
   end
 
   # GET /websites/new

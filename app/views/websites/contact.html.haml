@@ -1,0 +1,17 @@
+Contact Page
+%h1 
+  = @website.name
+%p 
+  = @website.domain_name
+= image_tag @website.logo.url
+
+%h5 
+  = @website.contact_page.phone
+%h5
+  = @website.contact_page.address
+%h5
+  = @website.contact_page.email
+
+
+= link_to 'Home', home_website_path(@website)
+= link_to 'About', about_website_path(@website)

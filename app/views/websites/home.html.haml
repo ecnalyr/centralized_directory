@@ -1,0 +1,16 @@
+Home Page
+%h1 
+  = @website.name
+%p 
+  = @website.domain_name
+= image_tag @website.logo.url
+
+%h3 
+  = @website.home_page.call_to_action
+%h4 
+  = @website.home_page.header
+%p 
+  = @website.home_page.content
+
+= link_to 'About', about_website_path(@website)
+= link_to 'Contact', contact_website_path(@website)
