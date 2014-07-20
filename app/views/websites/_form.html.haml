@@ -22,5 +22,12 @@
       = h.input :content
       = h.input :avatar, as: :file
 
+  %h2 Contact Page
+  = f.simple_fields_for :contact_page do |h|
+    .form-inputs
+      = h.input :phone
+      = h.input :address
+      = h.input :email
+
   .form-actions
     = f.button :submit

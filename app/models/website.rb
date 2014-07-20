@@ -21,6 +21,9 @@ class Website < ActiveRecord::Base
   has_one :about_page, dependent: :destroy
   accepts_nested_attributes_for :about_page
 
+  has_one :contact_page, dependent: :destroy
+  accepts_nested_attributes_for :contact_page
+
   has_attached_file :logo
   validates_attachment_content_type :logo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   
@@ -30,5 +33,6 @@ private
   def default_values
     self.home_page = home_page.presence || self.build_home_page
     self.about_page = about_page.presence || self.build_about_page
+    self.contact_page = contact_page.presence || self.build_contact_page
   end
 end

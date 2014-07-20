@@ -40,6 +40,18 @@
   %b Logo:
   = image_tag @website.about_page.avatar.url
 
+%h2 Contact Page
+
+%p
+  %b Name:
+  = @website.contact_page.phone
+%p
+  %b Domain name:
+  = @website.contact_page.address
+%p
+  %b Domain name:
+  = @website.contact_page.email
+
 = link_to 'Edit', edit_website_path(@website)
 \|
 = link_to 'Back', websites_path
