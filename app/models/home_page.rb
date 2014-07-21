@@ -20,7 +20,7 @@ class HomePage < ActiveRecord::Base
 
   has_attached_file :banner
   bucket: Rails.application.secrets.s3_bucket,
-  s3_credentials: {
+  :s3_credentials => {
                     access_key_id: Rails.application.secrets.AWS_ACCESS_KEY_ID,
                     secret_access_key: Rails.application.secrets.AWS_SECRET_ACCESS_KEY
                   }
