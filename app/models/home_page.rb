@@ -19,5 +19,10 @@ class HomePage < ActiveRecord::Base
   belongs_to :website
 
   has_attached_file :banner
-  validates_attachment_content_type :banner, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  bucket: Rails.application.secrets.s3_bucket,
+  s3_credentials: {
+                    access_key_id: Rails.application.secrets.AWS_ACCESS_KEY_ID,
+                    secret_access_key: Rails.application.secrets.AWS_SECRET_ACCESS_KEY
+                  }
+  validates_attachment_content_type :logo, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
 end

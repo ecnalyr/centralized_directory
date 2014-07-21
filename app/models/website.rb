@@ -26,11 +26,11 @@ class Website < ActiveRecord::Base
 
   has_attached_file :logo,
     bucket: Rails.application.secrets.s3_bucket,
-    :s3_credentials => {
-                      :access_key_id => Rails.application.secrets.AWS_ACCESS_KEY_ID,
-                      :secret_access_key => Rails.application.secrets.AWS_SECRET_ACCESS_KEY
+    s3_credentials: {
+                      access_key_id: Rails.application.secrets.AWS_ACCESS_KEY_ID,
+                      secret_access_key: Rails.application.secrets.AWS_SECRET_ACCESS_KEY
                     }
-  validates_attachment_content_type :logo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :logo, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
 
   
   before_save :default_values
