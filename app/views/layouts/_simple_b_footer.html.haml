@@ -1,0 +1,23 @@
+%footer.row
+  %hr
+    .large-12.columns
+      %h3 Other Places:
+      %hr/
+    .medium-4.small-12.columns
+      %img{src: "http://placehold.it/500x500&text=Thumbnail"}/
+      .panel
+        %p
+          = link_to 'Home', home_website_path(@website)
+    .medium-4.small-12.columns
+      %img{src: "http://placehold.it/500x500&text=Thumbnail"}/
+      .panel
+        %p
+          = link_to 'About', about_website_path(@website)
+    .medium-4.small-12.columns
+      %img{src: "http://placehold.it/500x500&text=Thumbnail"}/
+      .panel
+        %p
+          = link_to 'Contact', contact_website_path(@website)
+  .large-12.columns
+    %hr
+    %p © Copyright no one at all.

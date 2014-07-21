@@ -1,0 +1,22 @@
+.row
+  .large-12.columns
+    %nav.top-bar{"data-topbar" => ""}
+      %ul.title-area
+        %li.name
+          %h1
+            %a{href: "#"}
+              = @website.name
+        %li.toggle-topbar.menu-icon
+          %a{href: "#"}
+            %span menu
+      %section.top-bar-section
+        %ul.left
+          %li
+            = link_to 'Home', home_website_path(@website)
+          %li
+            = link_to 'About', about_website_path(@website)
+          %li
+            = link_to 'Contact', contact_website_path(@website)
+        %ul.right
+          %li.simple_b_logo
+            = image_tag @website.logo.url

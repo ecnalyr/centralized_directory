@@ -91,6 +91,26 @@ section {
   @extend .tiny;
 }
 
-main#simple_a {
+main.simple_a {
   background: white;
+}
+
+main.simple_b {
+  background: #003040;
+  color: white;
+  h3 {
+    color: #008cba;
+  }
+
+  label {
+    color: white;
+  }
+}
+
+header.simple_b {
+  background: #222222;
+}
+
+.simple_b_logo img {
+  max-height: 46px;
 }
