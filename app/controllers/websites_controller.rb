@@ -1,6 +1,6 @@
 class WebsitesController < ApplicationController
 
-  before_action :set_website, only: [:show, :edit, :update, :home, :about, :contact, :destroy]
+  before_action :set_website, only: [:show, :edit, :update, :home, :about, :contact, :destroy, :swap_style]
 
   # GET /websites
   # GET /websites.json
@@ -23,6 +23,16 @@ class WebsitesController < ApplicationController
 
   def contact
     render layout: @website.style
+  end
+
+  def swap_style
+    if @website.style == 'simple_a'
+      @website.style = 'simple_b'
+    else
+      @website.style = 'simple_a'
+    end
+    @website.save
+    redirect_to home_website_path(@website)
   end
 
   # GET /websites/new

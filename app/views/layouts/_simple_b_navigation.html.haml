@@ -17,6 +17,8 @@
             = link_to 'About', about_website_path(@website)
           %li
             = link_to 'Contact', contact_website_path(@website)
+          %li
+            = link_to 'Change Style', swap_style_website_path(@website)
         %ul.right
           %li.simple_b_logo
             = image_tag @website.logo.url

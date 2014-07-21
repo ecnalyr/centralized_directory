@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get :home
       get :about
       get :contact
+      get :swap_style
     end
   end
 
