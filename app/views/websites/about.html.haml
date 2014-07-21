@@ -1,15 +1,15 @@
-About Page
-%h1 
-  = @website.name
-%p 
-  = @website.domain_name
-= image_tag @website.logo.url
+.row
+  .small-12.columns
+    %h3 
+      About
+    %p 
+      = @website.domain_name
 
-%h4 
-  = @website.about_page.header
-%p 
-  = @website.about_page.content
-= image_tag @website.about_page.avatar.url
-
-= link_to 'Home', home_website_path(@website)
-= link_to 'Contact', contact_website_path(@website)
+.row
+  .medium-9.columns
+    %h3
+      = @website.about_page.header
+    %p
+      = @website.about_page.content
+  .medium-3.columns
+    = image_tag @website.about_page.avatar.url

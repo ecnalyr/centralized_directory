@@ -1,4 +1,5 @@
 class WebsitesController < ApplicationController
+
   before_action :set_website, only: [:show, :edit, :update, :home, :about, :contact, :destroy]
 
   # GET /websites
@@ -13,12 +14,15 @@ class WebsitesController < ApplicationController
   end
 
   def home
+    render layout: "simple_a"
   end
 
   def about
+    render layout: "simple_a"
   end
 
   def contact
+    render layout: "simple_a"
   end
 
   # GET /websites/new
