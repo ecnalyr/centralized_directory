@@ -1,7 +1,7 @@
 %ul.small-block-grid-1.medium-block-grid-4.large-block-grid-6
   - @websites.each do |website|
     %li
-      .row
+      .row.revealer-container
         = link_to '', class: 'revealer', id: website.id, default: false do
           = image_tag website.logo.url
       .row
