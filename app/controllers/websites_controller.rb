@@ -14,15 +14,15 @@ class WebsitesController < ApplicationController
   end
 
   def home
-    render layout: "simple_b"
+    render layout: @website.style
   end
 
   def about
-    render layout: "simple_b"
+    render layout: @website.style
   end
 
   def contact
-    render layout: "simple_b"
+    render layout: @website.style
   end
 
   # GET /websites/new

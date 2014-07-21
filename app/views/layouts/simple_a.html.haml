@@ -10,9 +10,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %header
+    %header.simple_a
       = render 'layouts/simple_a_navigation'
-    %main#simple_a{:role => "main"}
+    %main.simple_a{:role => "main"}
       = render 'layouts/messages'
       = yield
       = render 'layouts/simple_a_footer'
