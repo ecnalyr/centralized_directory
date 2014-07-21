@@ -1,4 +1,4 @@
-$(document).ready ->
+$(document).on 'ready page:load', ->
 
   $(".revealer").click (event) ->
     event.preventDefault()
