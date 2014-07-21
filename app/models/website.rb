@@ -24,8 +24,13 @@ class Website < ActiveRecord::Base
   has_one :contact_page, dependent: :destroy
   accepts_nested_attributes_for :contact_page
 
-  has_attached_file :logo
+  has_attached_file :logo,
+    bucket: Rails.application.secrets.s3_bucket,
+    s3_credentials: S3_CREDENTIALS,
+        url: '/:image/:id/:style/:basename.:extension',
+        path: ':image/:id/:style/:basename.:extension'
   validates_attachment_content_type :logo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
   
   before_save :default_values
 
