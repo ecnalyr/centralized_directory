@@ -54,7 +54,7 @@ class WebsitesController < ApplicationController
 
     respond_to do |format|
       if @website.save
-        format.html { redirect_to @website, notice: 'Website was successfully created.' }
+        format.html { redirect_to home_website_path(@website), notice: 'Website was successfully created.' }
         format.json { render :show, status: :created, location: @website }
       else
         format.html { render :new }
@@ -68,7 +68,7 @@ class WebsitesController < ApplicationController
   def update
     respond_to do |format|
       if @website.update(website_params)
-        format.html { redirect_to @website, notice: 'Website was successfully updated.' }
+        format.html { redirect_to home_website_path(@website), notice: 'Website was successfully updated.' }
         format.json { render :show, status: :ok, location: @website }
       else
         format.html { render :edit }
