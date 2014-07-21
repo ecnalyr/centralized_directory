@@ -23,5 +23,5 @@ class AboutPage < ActiveRecord::Base
                         access_key_id: Rails.application.secrets.AWS_ACCESS_KEY_ID,
                         secret_access_key: Rails.application.secrets.AWS_SECRET_ACCESS_KEY
                       }
-  validates_attachment_content_type :logo, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
+  validates_attachment_content_type :avatar, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
 end
