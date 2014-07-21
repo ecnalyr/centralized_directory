@@ -1,0 +1,24 @@
+%ul.small-block-grid-1.medium-block-grid-4.large-block-grid-6
+  - @websites.each do |website|
+    %li
+      .row
+        = link_to '', class: 'revealer', id: website.id, default: false do
+          = image_tag website.logo.url
+      .row
+        = link_to website.name, home_website_path(website)
+      .row
+        = website.about_page.content.truncate(30)
+%hr
+- @websites.each do |website|
+  .row.revealable{id: website.id}
+    .small-12.medium-6.columns
+      = image_tag website.home_page.banner.url
+    .small-12.medium-6.columns
+      %h4
+        = link_to website.name, home_website_path(website)
+      %p
+        = website.contact_page.phone
+      %p
+        = website.contact_page.address
+      %p
+        = website.contact_page.email
